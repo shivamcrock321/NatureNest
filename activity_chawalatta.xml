@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:windowSoftInputMode="adjustResize"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/chawalimg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/itemborder"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/outerScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/attas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_marginStart="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Title -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🍚 Chawal Atta – A Nutritious Rice Flour"
+                        android:textColor="#FFA200"
+                        android:textSize="24sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:paddingBottom="12dp" />
+
+                    <!-- Intro Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="✨ Chawal Atta, or rice flour, is a gluten-free alternative that provides a rich, smooth texture to your recipes. It’s widely used in Indian cuisine and perfect for those with dietary sensitivities."
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:lineSpacingExtra="6dp"
+                        android:paddingBottom="12dp" />
+
+                    <!-- Nutritional Highlights -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📊 Nutritional Highlights (Per 100g Chawal Atta):"
+                        android:textColor="#FFCC00"
+                        android:textSize="21sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔥 Calories: ~366 kcal\n⚡ Carbohydrates: ~80g (provides energy)\n🌾 Fiber: ~3g (supports digestive health)\n💪 Protein: ~6g (supports muscle growth)\n🩸 Iron: ~1.4mg (supports healthy blood circulation)"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:lineSpacingExtra="6dp"
+                        android:paddingBottom="12dp" />
+
+                    <!-- Benefits of Eating Chawal Atta -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🌟 Benefits of Including Chawal Atta in Your Diet:"
+                        android:textColor="#FFD700"
+                        android:textSize="21sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🚫 Gluten-Free: Ideal for those with gluten intolerance or celiac disease.\n⚡ High in Carbohydrates: Provides a great energy boost.\n🌱 Good for Digestion: Rich in fiber that aids in digestion and keeps the gut healthy.\n⚖️ Supports Weight Management: Low in fat and can be part of a balanced diet."
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:lineSpacingExtra="6dp"
+                        android:paddingBottom="12dp" />
+
+                    <!-- Closing Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🥣 Chawal Atta can be used for making chapatis, snacks, sweets, and more. Embrace its versatility and enjoy its nutritional benefits!"
+                        android:textColor="#FAFAFA"
+                        android:textSize="20sp"
+                        android:lineSpacingExtra="6dp"
+                        android:paddingBottom="12dp" />
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="199dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profiletextborder"
+                android:gravity="center"
+                android:text="Type of Grinding"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="357dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/profiletextborder"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <RadioButton
+                android:id="@+id/Fine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="#21B1F4"
+                android:buttonTint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_marginEnd="230dp"
+                android:text="Fine"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/Fine"
+                app:layout_constraintEnd_toStartOf="@+id/Fine"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/Fine" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="357dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/profiletextborder"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+
+                android:layout_height="39dp"
+                android:layout_marginEnd="185dp"
+                android:text="Medium"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/Normal"
+                app:layout_constraintEnd_toStartOf="@+id/Normal"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/Normal" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="357dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/profiletextborder"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView8"
+
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_marginEnd="199dp"
+                android:text="Coarse"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="@+id/Coarse"
+                app:layout_constraintEnd_toStartOf="@+id/Coarse"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/Coarse" />
+
+            <RadioButton
+                android:id="@+id/Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="#21B1F4"
+                android:buttonTint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            <RadioButton
+                android:id="@+id/Coarse"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="#21B1F4"
+                android:buttonTint="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+
+            <!-- Horizontal Scroll View for Related Products -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/scrollView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="Chakki Fresh Atta"
+                    android:textColor="#FFC107"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Apple -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/multigrainbtn"
+                                android:onClick="openmultigrainbtnActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_multigrainbtn_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Mango -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/gehuatta"
+                                android:onClick="opengehuattaActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_gehuatta_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Banana -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/mpsehorebtn"
+                                android:onClick="openmpsehorebtnActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_mpsehorebtn_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Grapes -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/bajraatta"
+                                android:onClick="openchawalattaActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_chawalatta_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/nachaniatta"
+                                android:onClick="opennachaniattaActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_nachaniatta_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/multigrain1"
+                                android:src="@drawable/rounded_button"
+                                android:onClick="openattaActivity"
+                                android:scaleType="centerCrop" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="Look for our Fresh Vegetables"
+                    android:textColor="#FFC107"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Apple -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/tomato"
+                                android:onClick="opentomatoActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_tomato_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Mango -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/potato"
+                                android:onClick="openpotatoActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_potato_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Banana -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/onion"
+                                android:onClick="openonionActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_onion_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Grapes -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/garlic"
+                                android:onClick="opengarlicActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_garlic_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/caroot"
+                                android:onClick="openCarootActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_caroot_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/vegetables"
+                                android:src="@drawable/rounded_button"
+                                android:onClick="openmultigrain1Activity"
+                                android:scaleType="centerCrop" />
+                            />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="Oraganic Cream"
+                    android:textColor="#FFC107"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Apple -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/cowmilk1"
+                                android:onClick="opencowmilk1Activity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_cowmilk1_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Mango -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/cowghee"
+                                android:onClick="opencowgheeActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_cowghee_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Banana -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/buffalomilk"
+                                android:onClick="openbuffalomilkActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_buffalomilk_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Grapes -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/buffaloghee"
+                                android:onClick="openbuffalogheeActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_buffaloghee_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/paneer"
+                                android:onClick="openpaneerActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_paneer_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/dairy1"
+                                android:src="@drawable/rounded_button"
+                                android:onClick="opendairy1Activity"
+                                android:scaleType="centerCrop" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:paddingStart="16dp"
+                    android:paddingBottom="10dp"
+                    android:text="More Fresh Fruits"
+                    android:textColor="#FFC107"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Apple -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/strawberry"
+                                android:onClick="openstrawberryActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_strawberry_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Mango -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/mango"
+                                android:onClick="openMangoActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_mango_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Banana -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/banana"
+                                android:onClick="openBananaActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_banana_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Grapes -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/grapes"
+                                android:onClick="openGrapesActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_grapes_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/kiwi"
+                                android:onClick="openKiwiActivity"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/horizontal_kiwi_not_available"
+                                android:layout_width="300dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/notavailableimg"
+                                android:visibility="gone" />
+                        </FrameLayout>
+                        <!-- Kiwi -->
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp">
+
+                            <ImageButton
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:background="@drawable/fruts"
+                                android:src="@drawable/rounded_button"
+                                android:onClick="openFruitsActivity"
+                                android:scaleType="centerCrop" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Always visible cart controls fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:name="com.NatureNest.phoneauthkt.attacartiteam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
